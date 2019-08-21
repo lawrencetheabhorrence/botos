@@ -18,12 +18,21 @@
         <h2>{{ position }}</h2>
         <div class="candidates">
             {% for candidate in candidates %}
+            {% if 'Representative' in position and user.section.section_name == candidate.user.section.section_name %}
             <div class="candidate">
                 <img src="{{ MEDIA_PREFIX }}{{ candidate.avatar }}" alt="Candidate: {{ candidate.user.first_name }} {{ candidate.user.last_name }}" />
                 <h3>{{ candidate.user.last_name }}, {{ candidate.user.first_name }}</h3>
                 <h4>{{ candidate.party.party_name }}</h4>
                 <button class="vote-btn" value="{{ candidate.id }}">Vote</button>
             </div>
+            {% elif user.batch.year == candidate.user.batch.year %}
+            <div class="candidate">
+                <img src="{{ MEDIA_PREFIX }}{{ candidate.avatar }}" alt="Candidate: {{ candidate.user.first_name }} {{ candidate.user.last_name }}" />
+                <h3>{{ candidate.user.last_name }}, {{ candidate.user.first_name }}</h3>
+                <h4>{{ candidate.party.party_name }}</h4>
+                <button class="vote-btn" value="{{ candidate.id }}">Vote</button>
+            </div>
+            {% endif %}
             {% endfor %}
         </div>
     </section>

@@ -20,12 +20,12 @@ header#login {
 }
 
 header#login img#botos-logo {
-    width: 30%;
+    width: 20%;
 }
 
 header#login div#title-text h1 {
     font-family: 'PT Sans', sans-serif;
-    font-size: 5em;
+    font-size: 3em;
     font-weight: 700;
 
     margin-top: 1%;
@@ -37,7 +37,7 @@ header#login div#title-text h2 {
     font-size: 1.5em;
     font-weight: 300;
 
-    margin-top: -5%;
+    margin-top: 0%;
 }
 
 article#login {
