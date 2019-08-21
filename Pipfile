@@ -12,6 +12,7 @@ freezegun = "*"
 pillow = "*"
 beautifulsoup4 = "*"
 phe = "*"
+openpyxl = "*"
 
 [requires]
 python_version = "3.5"
